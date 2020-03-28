@@ -1,2 +1,4 @@
-# deep_learning_python
-Multiple examples to learn deep neural networks from the book "Deep Learning with Python"
+# Deep Learning With Python
+
+All examples sourced from Deep Learning with Python by Francois Chollet.
+(Link to book - Amazon)[https://www.amazon.com/gp/product/B07H5RKKB6/ref=dbs_a_def_rwt_hsch_vapi_taft_p1_i0]
