@@ -16,6 +16,8 @@ test_labels = to_categorical(test_labels)
 
 network = models.Sequential()
 network.add(layers.Dense(512, activation='relu', input_shape=(28 * 28,)))
+# Adding an additional layer increases training accuracy but causes more overfit
+# of the data!
 network.add(layers.Dense(10, activation='softmax'))
 network.compile(optimizer='rmsprop',
                 loss='categorical_crossentropy',
