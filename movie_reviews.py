@@ -2,18 +2,10 @@ from keras.datasets import imdb
 from keras import models, layers, optimizers, losses, metrics
 import numpy as np
 import matplotlib.pyplot as plt
+from vector_utils import vectorize_sequences
+from plotting_utils import plot_metric
 
 (train_data, train_labels), (test_data, test_labels) = imdb.load_data(num_words=10000)
-
-# One-Hot encoding of input vectors. Take the sample review
-# and encode a 1 for each word indicie, making every vector
-# of length 10,000.
-
-def vectorize_sequences(sequences, dimension=10000):
-    results = np.zeros((len(sequences), dimension))
-    for i, sequence in enumerate(sequences):
-        results[i, sequence] = 1
-    return results
 
 # Turn every review into a 10,0000 dimension vector
 x_train = vectorize_sequences(train_data)
